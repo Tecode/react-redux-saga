@@ -14,8 +14,17 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import Loadable from 'react-loadable';
+
+/**
+ * Asynchronously loads the component for HomePage
+ */
+
+const HomePage = Loadable({
+  loader: () => import('containers/Home'),
+  loading: () => null,
+});
 
 export default function App() {
   return (
