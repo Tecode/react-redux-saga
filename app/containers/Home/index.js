@@ -33,7 +33,7 @@ export default class HomePage extends PureComponent {
   render() {
     return (
       <h1>
-        <button onClick={this.props.handleClick}>首页</button>
+        <p onClick={this.props.handleClick}>首页</p>
         有{this.props.listData.length}条数据
         <button onClick={this.props.getUser}>异步请求</button>
       </h1>
